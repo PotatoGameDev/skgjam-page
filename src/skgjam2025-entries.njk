@@ -1,0 +1,27 @@
+---
+title: SKG Community Jam (2025) - Entries
+layout: layouts/base.njk
+permalink: /skgjam2025-entries/
+---
+
+# Stop Killing Games Community Jam Entries
+
+{% set sortedGames = skgjam2025entries.jam_games 
+    | sort(attribute="rating_count")
+    | reverse 
+%}
+
+{% for entry in sortedGames %}
+	<div class="game-card">
+		<h3>{{ entry.game.title }}</h3>
+
+		{% if entry.game.cover %}
+		<img src="{{ entry.game.cover }}" alt="{{ entry.game.title }}">
+		{% endif %}
+
+		<p><a href="{{ entry.game.url }}">View Game at itch.io</a></p>
+		<p>By: <a href="{{ entry.game.user.url }}">{{ entry.game.user.name }}</a></p>
+		<p>Platforms: {{ entry.game.platforms | default([]) | join(", ") }}</p>
+		<p>Rated: {{ entry.rating_count }}</p>
+	</div>
+{% endfor %}

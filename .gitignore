@@ -1,4 +1,8 @@
 # Logs
+
+# 11ty
+_site
+
 logs
 *.log
 npm-debug.log*
