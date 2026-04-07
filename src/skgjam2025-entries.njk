@@ -7,8 +7,7 @@ permalink: /skgjam2025-entries/
 # Stop Killing Games Community Jam Entries
 
 {% set sortedGames = skgjam2025entries.jam_games 
-    | sort(attribute="rating_count")
-    | reverse 
+    | sort(attribute="scores.Overall.rank")
 %}
 
 {% for entry in sortedGames %}
@@ -23,5 +22,7 @@ permalink: /skgjam2025-entries/
 		<p>By: <a href="{{ entry.game.user.url }}">{{ entry.game.user.name }}</a></p>
 		<p>Platforms: {{ entry.game.platforms | default([]) | join(", ") }}</p>
 		<p>Rated: {{ entry.rating_count }}</p>
+		<p>Rating: {{ entry.scores.Overall.score }}</p>
+		<p>Position: {{ entry.scores.Overall.rank }}</p>
 	</div>
 {% endfor %}
