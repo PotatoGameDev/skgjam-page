@@ -15,7 +15,7 @@ Good times!
 In the end the petition succeeded, we made 233 games, Ross played the winning entries
 and everyone had fun for a good cause :)
 
-[Check out the wonderful games created in the jam](/skgjam2025-entries/).
+[Check out the wonderful games created in the jam](../skgjam2025-entries/).
 
 The jam took 10 days, and 7 days for community judging.
 In the last day, August 1st, the final results have been presented in the form of this cool showreel:

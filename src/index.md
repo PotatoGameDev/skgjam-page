@@ -7,5 +7,5 @@ layout: layouts/base.njk
 
 Current edition of SKG Community Jam 2026!
 
-If you want to, see [the previous edition](/skgjam2025/).
+If you want to, see [the previous edition](skgjam2025/).
 
