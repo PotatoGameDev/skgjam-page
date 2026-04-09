@@ -2,9 +2,9 @@
 <html>
 <head>
 	<title>{{ title }}</title>
-	<link rel="stylesheet" href="/css/global.css">
+	<link rel="stylesheet" href="{{ "/css/global.css" | toBaseUrl }}">
 	{% if pageStyle%}
-	<link rel="stylesheet" href="/css/{{ pageStyle }}">
+	<link rel="stylesheet" href="{{ ("/css/" + pageStyle) | toBaseUrl }}">
 	{% endif %}
 </head>
 <body>
@@ -12,9 +12,9 @@
 		<div class="jam-banner-inner">
 			<a href="/">
 			{% if jamLogo%}
-			<img class="logo" src="/assets/{{ jamLogo }}" alt="Jam logo">
+			<img class="logo" src="{{ ("/assets/" + jamLogo) | toBaseUrl }}" alt="Jam logo">
 			{% else %}
-			<img class="logo" src="/assets/skgjam2026.png" alt="Jam logo">
+			<img class="logo" src="{{ "/assets/skgjam2026.png" | toBaseUrl }}" alt="Jam logo">
 			{% endif %}
 			</a>
 			<div>
