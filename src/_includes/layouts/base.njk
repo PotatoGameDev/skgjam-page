@@ -12,9 +12,9 @@
 		<div class="jam-banner-inner">
 			<a href="/">
 			{% if jamLogo%}
-			<img class="logo" src="assets/{{ jamLogo }}" alt="Jam logo">
+			<img class="logo" src="{{ ("/assets/" + jamLogo) | toBaseUrl }}" alt="Jam logo">
 			{% else %}
-			<img class="logo" src="assets/skgjam2026.png" alt="Jam logo">
+			<img class="logo" src="{{ "/assets/skgjam2026.png" | toBaseUrl }}" alt="Jam logo">
 			{% endif %}
 			</a>
 			<div>
