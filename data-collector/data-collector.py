@@ -1,4 +1,5 @@
 import json
+import os
 import requests
 import time
 import argparse
@@ -18,9 +19,9 @@ def parse_args() -> argparse.Namespace:
         help="Id of the game jam, you have to manually figure it out by inspecting itch jam page's code for now... Defaults to the original 2025 jam id."
     )
     parser.add_argument(
-        "-o", "--output",
-        default="jam_games_2025.json",
-        help="Name for the output file."
+        "-n", "--output-name",
+        default="jam_games_2025",
+        help="The output base name"
     )
     return parser.parse_args()
 
@@ -38,13 +39,32 @@ def get_entry_page(game_url):
 
     return html_response
 
+def save_cover(entry, output_dir):
+    # Saving the cover
+    cover_url = entry["game"]["cover"]
+    if cover_url:
+        cover_response = requests.get(cover_url)
+        cover_response.raise_for_status()
+
+        _, ext = os.path.splitext(cover_url)
+
+        # writing the entry
+        with open(output_dir + "/" + str(entry["id"]) + "_cover" + ext, "wb") as f:
+            f.write(cover_response.content)
+
 def main():
     args = parse_args()
 
     entries = get_entries(args)
 
+    output_dir = "../src/_data/" + args.output_name
+    os.makedirs(output_dir, exist_ok=True)
+
     for entry in tqdm(entries["jam_games"], desc="Downloading jam results"):
         entry_html = get_entry_page(entry["url"])
+
+        # Saving of the covers probably is not a good idea.
+        # save_cover(entry, output_dir)
 
         soup = BeautifulSoup(entry_html.text, "html.parser")
 
@@ -74,9 +94,9 @@ def main():
 
         time.sleep(0.5)
 
-        
-    with open(args.output, "w") as f:
+    with open(output_dir + "/jam_games.json", "w") as f:
         json.dump(entries, f)
+
 
 if __name__ == "__main__":
     main()

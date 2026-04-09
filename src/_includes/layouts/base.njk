@@ -2,9 +2,31 @@
 <html>
 <head>
 	<title>{{ title }}</title>
+	<link rel="stylesheet" href="/css/global.css">
+	{% if pageStyle%}
+	<link rel="stylesheet" href="/css/{{ pageStyle }}">
+	{% endif %}
 </head>
 <body>
-	{{ content | safe }}
+	<div class="jam-banner">
+		<div class="jam-banner-inner">
+			<a href="/">
+			{% if jamLogo%}
+			<img class="logo" src="/assets/{{ jamLogo }}" alt="Jam logo">
+			{% else %}
+			<img class="logo" src="/assets/skgjam2026.png" alt="Jam logo">
+			{% endif %}
+			</a>
+			<div>
+				<h1>{{title}}</h1>
+			</div>
+		</div>
+	</div>
+	<div class="page-outer">
+		<div class="page-content">
+			{{ content | safe }}
+		</div>
+	</div>
 </body>
 
 </html>

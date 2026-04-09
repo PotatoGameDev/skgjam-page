@@ -2,6 +2,7 @@
 
 # 11ty
 _site
+data-collector/.venv
 
 logs
 *.log

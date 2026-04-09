@@ -6,7 +6,7 @@ permalink: /skgjam2025-entries/
 
 # Stop Killing Games Community Jam Entries
 
-{% set sortedGames = skgjam2025entries.jam_games 
+{% set sortedGames = skgjam2025.jam_games.jam_games
     | sort(attribute="scores.Overall.rank")
 %}
 
