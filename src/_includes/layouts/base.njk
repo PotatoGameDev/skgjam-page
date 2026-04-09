@@ -4,7 +4,7 @@
 	<title>{{ title }}</title>
 	<link rel="stylesheet" href="{{ "/css/global.css" | toBaseUrl }}">
 	{% if pageStyle%}
-	<link rel="stylesheet" href="{{ "/css/" + pageStyle | toBaseUrl }}">
+	<link rel="stylesheet" href="{{ ("/css/" + pageStyle) | toBaseUrl }}">
 	{% endif %}
 </head>
 <body>

@@ -5,7 +5,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("toBaseUrl", (path) => {
     const base = process.env.ELEVENTY_BASE_URL;
     if (!base) return path;
-    return path.startsWith("/") ? base + path : path;
+    return "/" + base + path;
   });
 
   return {
