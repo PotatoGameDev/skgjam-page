@@ -146,3 +146,22 @@ h1 {
 h2 {
 	text-align: center;
 }
+
+/* Call To Action so that the jam link stands out more! */
+
+.jam-cta {
+	display: block;
+	width: fit-content;
+	margin: 1rem auto;
+	background: #ffffff;
+	color: #000000;
+	padding: 0.75rem 1.5rem;
+	border-radius: 6px;
+	font-weight: bold;
+	text-decoration: none;
+	transition: background 0.2s;
+}
+
+.jam-cta:hover {
+	background: #cccccc;
+}

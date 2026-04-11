@@ -8,6 +8,8 @@ layout: layouts/base.njk
 This jam is created by the community surrounding the Stop Killing Games movement.
 By ordinary people who love the medium and care for it's preservation. 
 
+<a class="jam-cta" href="https://itch.io/jam/skg-jam-2026">Stop Killing Games Community Jam 2026</a>
+
 The unique part of our jam is the care for the end-of-life planning for your game.
 You have to not only develop the game, but also think about the preservation of your game.
 Will the players be able to enjoy it if itch.io goes down? 
@@ -26,6 +28,8 @@ There is plenty of time to get ready, so go ahead and sign up!
 This time there are some prizes involved!
 Thanks to the wonderful people at Boot.dev, every member of the winning team will get a 1-year membership to their platform!
 Additionally, everyone who submits a valid gamejam entry will get 1 month Boot.dev membership  :)
+
+Have you joined already? Click that big gray button at the top!
 
 ---
 
