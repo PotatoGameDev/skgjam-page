@@ -14,9 +14,6 @@ jobs:
           node-version: '24'
       - run: npm ci
       - run: npm run build
-        env:
-#          ELEVENTY_BASE_URL: ${{ github.event.repository.name }}
-          ELEVENTY_BASE_URL: ''
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
