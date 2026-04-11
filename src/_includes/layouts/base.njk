@@ -4,20 +4,20 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{ title }}</title>
-	<link rel="stylesheet" href="{{ " /css/global.css" | toBaseUrl }}">
+	<link rel="stylesheet" href="{{ "/css/global.css" | toBaseUrl }}">
 	{% if pageStyle%}
-	<link rel="stylesheet" href="{{ (" /css/" + pageStyle) | toBaseUrl }}">
+	<link rel="stylesheet" href="{{ ("/css/" + pageStyle) | toBaseUrl }}">
 	{% endif %}
 </head>
 
 <body>
 	<div class="jam-banner">
 		<div class="jam-banner-inner">
-			<a href="{{ " /" | toBaseUrl }}">
+			<a href="{{ "/" | toBaseUrl }}">
 				{% if jamLogo%}
-				<img class="logo" src="{{ (" /assets/" + jamLogo) | toBaseUrl }}" alt="Jam logo">
+				<img class="logo" src="{{ ("/assets/" + jamLogo) | toBaseUrl }}" alt="Jam logo">
 				{% else %}
-				<img class="logo" src="{{ " /assets/skgjam2026.png" | toBaseUrl }}" alt="Jam logo">
+				<img class="logo" src="{{ "/assets/skgjam2026.png" | toBaseUrl }}" alt="Jam logo">
 				{% endif %}
 			</a>
 			<div>
