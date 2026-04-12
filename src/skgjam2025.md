@@ -27,7 +27,7 @@ Everyone had good fun for a good cause :)
 
 Big thanks to Ross, who helped to promote the jam and also played 20 top placed entries on his stream!
 
-[Check out the wonderful games created in the jam](../skgjam2025-entries/).
+<a class="jam-cta" href="../skgjam2025-entries/">Check out the wonderful games created for the jam</a>
 
 The jam took 11 days, and 10 days for community judging.
 The final results have been presented in the form of this cool showreel:
