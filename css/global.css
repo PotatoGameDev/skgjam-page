@@ -165,3 +165,31 @@ h2 {
 .jam-cta:hover {
 	background: #cccccc;
 }
+
+/* Games list */
+.game-card-body {
+	display: flex;
+	gap: 1rem;
+	align-items: flex-start;
+}
+
+.game-card-body img {
+	flex-shrink: 0;
+	width: 300px;
+	height: auto;
+}
+
+.game-card-info {
+	flex: 1;
+}
+
+@media (max-width: 600px) {
+
+	.game-card-body {
+		flex-direction: column;
+	}
+
+	.game-card-body img {
+		width: 100%;
+	}
+}
