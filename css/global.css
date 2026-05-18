@@ -159,6 +159,7 @@ h2 {
 	border-radius: 6px;
 	font-weight: bold;
 	text-decoration: none;
+	text-align: center;
 	transition: background 0.2s;
 }
 
