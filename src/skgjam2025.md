@@ -14,6 +14,8 @@ progress bar forward.
 
 Good times!
 
+<a class="jam-cta" href="https://itch.io/jam/stop-killing-games-game-jam">SKG Community Jam 2025</a>
+
 The jam was organized with very little advance.
 Fortunately, a lot of people helped spread the news of the jam!
 Ross Scott made a youtube post about it, letting people know of our little "crunch session" :D
