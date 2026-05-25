@@ -5,27 +5,27 @@ permalink: /skgjam2025-entries/
 ---
 
 {% set sortedGames = skgjam2025.jam_games.jam_games
-    | sort(attribute="scores.Overall.rank")
+| sort(attribute="scores.Overall.rank")
 %}
 
 {% for entry in sortedGames %}
-	<div class="game-card">
+<div class="game-card">
 
-		<h1>{{ entry.scores.Overall.rank }}. {{ entry.game.title }}</h1>
-		
-		<div class="game-card-body">
-			{% if entry.game.cover %}
-				<img src="{{ entry.game.cover }}" alt="{{ entry.game.title }}">
-			{% endif %}
+	<h1>{{ entry.scores.Overall.rank }}. {{ entry.game.title }}</h1>
 
-			<div class="game-card-info">
-				<p>By: <a href="{{ entry.game.user.url }}">{{ entry.game.user.name }}</a></p>
-				<p><a href="{{ entry.game.url }}">View Game at itch.io</a></p>
-				<p>Platforms: {{ entry.game.platforms | default([]) | join(", ") }}</p>
-				<p>Rating: {{ entry.scores.Overall.score }}
+	<div class="game-card-body">
+		{% if entry.game.cover %}
+		<img src="{{ entry.game.cover }}" alt="{{ entry.game.title }}">
+		{% endif %}
+
+		<div class="game-card-info">
+			<p>By: <a href="{{ entry.game.user.url }}">{{ entry.game.user.name }}</a></p>
+			<p><a href="{{ entry.game.url }}">View Game at itch.io</a></p>
+			<p>Platforms: {{ entry.game.platforms | default([]) | join(", ") }}</p>
+			<p>Rating: {{ entry.scores.Overall.score }}
 				Rated: {{ entry.rating_count }}</p>
-			</div>
 		</div>
-		<hr >
 	</div>
+	<hr>
+</div>
 {% endfor %}
