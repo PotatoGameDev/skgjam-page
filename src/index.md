@@ -78,13 +78,3 @@ Check out the previous edition.
 
 [Stop Killing Games Community Jam](skgjam2025/)
 
---- 
-
-## Help The Jam!
-
-Just as the movement itself, the jam has been created by the community for the community.
-So please, support us by spreading the word!
-
-
-
-
