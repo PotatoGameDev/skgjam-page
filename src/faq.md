@@ -36,7 +36,7 @@ Don't hesitate to contact discord user PotatoGameDev, he is responsible for the 
 
 If you want to influence this page itself, add some articles, fix typos,
 help with the styles - check out the github repo:
-[github.com/PotatoGameDev/skgjam-page](github.com/PotatoGameDev/skgjam-page)
+[https://github.com/PotatoGameDev/skgjam-page](https://github.com/PotatoGameDev/skgjam-page)
 
 Feel free to create a pull request!
 
