@@ -31,7 +31,7 @@ There is plenty of time to get ready, so go ahead and sign up!
     </a>
     <br>
 
-Thanks to the wonderful people at Boot.dev, every member of the winning team will get a 1-year membership to their platform!
+Thanks to the wonderful people at <a href="https://boot.dev">Boot.dev</a>, every member of the winning team will get a 1-year membership to their platform!
 Additionally, everyone who submits a valid game jam entry will get a 1-month Boot.dev membership :)
 Thanks to Boot.dev for supporting our jam!
 </p>
@@ -44,7 +44,7 @@ Thanks to Boot.dev for supporting our jam!
     </a>
     <br>
 
-Kenney.nl, the creator of the fantastic free graphic assets many of us use in our games has supported our jam with prizes for our winning teams!
+<a href="https://kenney.nl">Kenney.nl</a>, the creator of the fantastic free graphic assets many of us use in our games has supported our jam with prizes for our winning teams!
 
 Each of the top 3 teams will get:
 
@@ -62,10 +62,26 @@ Thank you very much, Kenney for those wonderful prizes!
     </a>
     <br>
 
-Igara Studio, the creators of Aseprite, the well-known and respected pixel art software on the indie scene, supported our jam with free codes for their great software!
+Igara Studio, the creators of <a href="https://www.aseprite.org/">Aseprite</a>, the well-known and respected pixel art software on the indie scene, supported our jam with free codes for their great software!
 
 The top 3 teams will each get 3 codes for Aseprite!
 Thank you, Igara Studio!
+
+</p>
+
+--- 
+
+<p class="sponsor">
+    <a href="https://craftpix.net/?utm_source=itch.io&utm_medium=gamejam&utm_campaign=skg-jam">
+        <img src="assets/craftpix-logo.png" alt="CraftPix.net logo">
+    </a>
+    <br>
+
+<a href="https://craftpix.net/?utm_source=itch.io&utm_medium=gamejam&utm_campaign=skg-jam">CraftPix.net</a> supported us with their amazing prizes!
+
+Top 3 teams will get 1-year CraftPix memberships for every member (up to 5 memberships per team). 
+CraftPix.net is an online store and resource specializing in high-quality premium and free 2D game assets for game developers, indie studios, and hobbyists.
+Thank you very much, CraftPix!
 
 </p>
 
@@ -76,5 +92,5 @@ Thank you, Igara Studio!
 Our community has already created over 200 games!
 Check out the previous edition.
 
-[Stop Killing Games Community Jam](skgjam2025/)
 
+[Stop Killing Games Community Jam](skgjam2025/)
