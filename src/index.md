@@ -85,6 +85,27 @@ Thank you very much, CraftPix!
 
 </p>
 
+--- 
+
+<p class="sponsor">
+    <a href="https://oppalin.com">
+        <img src="assets/oppalin-logo.png" alt="Oppalin logo">
+    </a>
+    <br>
+
+<a href="https://oppalin.com/">Oppalin</a> joined as a sponsor to give their nice prizes for our jammers :)
+
+Oppalin is a web-based board for organizing inspiration and sketching, add images from any device, import boards from Pinterest, work by yourself or with friends and share via links.
+
+Top 3 teams will get Oppalin memberships for every member (up to 5 memberships per team):
+- 1st - 12 months of Pro Plan
+- 2nd - 9 months of Pro Plan
+- 3rd - 6 months of Pro Plan
+- One Lifetime License will be given to one lucky random team that uploads a valid game! (For one person of the team)
+Thanks for the support, Oppalin!
+
+</p>
+
 ---
 
 ## 2025 Edition
