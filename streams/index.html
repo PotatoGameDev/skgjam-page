@@ -74,10 +74,13 @@
 	tzNote.textContent = "Times are shown in your local timezone (" + tz + ").";
 
 	fetch(streamsUrl)
-		.then(function (r) { return r.json(); })
+		.then(function (r) {
+			if (!r.ok) throw new Error("missing");
+			return r.json();
+		})
 		.then(render)
 		.catch(function () {
-			listEl.textContent = "Couldn't load the stream calendar.";
+			listEl.textContent = "No stream list file available yet.";
 		});
 
 	function render(streams) {
