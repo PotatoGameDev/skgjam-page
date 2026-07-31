@@ -1,0 +1,91 @@
+---
+title: Stream Calendar
+layout: layouts/base.njk
+permalink: /streams/
+pageStyle: streams.css
+---
+
+<h1>Stream Calendar</h1>
+
+<p>
+	Who is streaming which jam submissions, and when. Upcoming streams are listed first.
+</p>
+
+<p id="tz-note" class="tz-note" data-streams-url="{{ '/assets/streams.json' | toBaseUrl }}"></p>
+<ul id="stream-list" class="stream-list"></ul>
+
+<script>
+(function () {
+	var streamsUrl = document.getElementById("tz-note").getAttribute("data-streams-url");
+	var listEl = document.getElementById("stream-list");
+	var tzNote = document.getElementById("tz-note");
+	var tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+	tzNote.textContent = "Times are shown in your local timezone (" + tz + ").";
+
+	fetch(streamsUrl)
+		.then(function (r) { return r.json(); })
+		.then(render)
+		.catch(function () {
+			listEl.textContent = "Couldn't load the stream calendar.";
+		});
+
+	function render(streams) {
+		var now = Date.now();
+		var upcoming = streams
+			.filter(function (s) { return new Date(s.start).getTime() >= now; })
+			.sort(function (a, b) { return new Date(a.start) - new Date(b.start); });
+		var past = streams
+			.filter(function (s) { return new Date(s.start).getTime() < now; })
+			.sort(function (a, b) { return new Date(b.start) - new Date(a.start); });
+
+		if (!streams.length) {
+			listEl.textContent = "No streams scheduled yet.";
+			return;
+		}
+
+		upcoming.forEach(function (s) { listEl.appendChild(renderItem(s, false)); });
+		past.forEach(function (s) { listEl.appendChild(renderItem(s, true)); });
+	}
+
+	function renderItem(s, isPast) {
+		var li = document.createElement("li");
+		if (isPast) li.className = "past";
+
+		var time = new Intl.DateTimeFormat(undefined, {
+			dateStyle: "medium",
+			timeStyle: "short"
+		}).format(new Date(s.start));
+
+		li.appendChild(document.createTextNode(s.streamer + " - " + time));
+		if (s.title) {
+			li.appendChild(document.createTextNode(" - " + s.title));
+		}
+		if (isPast) {
+			li.appendChild(document.createTextNode(" (ended)"));
+		}
+
+		var links = [];
+		if (s.youtube) links.push(makeLink(s.youtube, "YouTube"));
+		if (s.twitch) links.push(makeLink(s.twitch, "Twitch"));
+		if (links.length) {
+			li.appendChild(document.createTextNode(" - "));
+			links.forEach(function (a, i) {
+				if (i > 0) li.appendChild(document.createTextNode(", "));
+				li.appendChild(a);
+			});
+		}
+
+		return li;
+	}
+
+	function makeLink(href, label) {
+		var a = document.createElement("a");
+		a.href = href;
+		a.target = "_blank";
+		a.rel = "noopener";
+		a.textContent = label;
+		return a;
+	}
+})();
+</script>

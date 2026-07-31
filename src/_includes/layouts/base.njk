@@ -34,6 +34,18 @@
 				class="{% if page.url == '/skgjam2025/' %}active{% endif %}">
 				2025 Edition
 			</a>
+			<div class="jam-nav-item">
+				<a href="{{ '/streams/' | toBaseUrl }}"
+					class="{% if page.url | startsWith('/streams/') %}active{% endif %}">
+					Streams
+				</a>
+				<div class="jam-submenu">
+					<a href="{{ '/streams/generator/' | toBaseUrl }}"
+						class="{% if page.url == '/streams/generator/' %}active{% endif %}">
+						Random Generator
+					</a>
+				</div>
+			</div>
 			<a href="{{ '/faq/' | toBaseUrl }}" class="{% if page.url == '/faq/' %}active{% endif %}">
 				FAQ
 			</a>

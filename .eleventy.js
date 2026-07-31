@@ -8,6 +8,10 @@ module.exports = function (eleventyConfig) {
     return "/" + base + path;
   });
 
+  eleventyConfig.addFilter("startsWith", (str, prefix) => {
+    return str.startsWith(prefix);
+  });
+
   return {
     dir: {
       input: "src",

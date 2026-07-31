@@ -1,0 +1,15 @@
+[
+	{
+		"streamer": "ExampleStreamer",
+		"start": "2026-08-02T17:00:00Z",
+		"title": "Community jam highlights",
+		"youtube": "https://www.youtube.com/@example",
+		"twitch": "https://www.twitch.tv/example"
+	},
+	{
+		"streamer": "AnotherStreamer",
+		"start": "2026-08-05T19:30:00Z",
+		"title": "Drawing submissions from the jar",
+		"twitch": "https://www.twitch.tv/another"
+	}
+]
