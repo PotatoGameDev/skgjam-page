@@ -1,0 +1,97 @@
+.draw-btn {
+	background: #ffffff;
+	color: #000000;
+	padding: 0.75rem 1.5rem;
+	border: none;
+	border-radius: 6px;
+	font-size: 1rem;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+
+.draw-btn:hover:not(:disabled) {
+	background: #cccccc;
+}
+
+.draw-btn:disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+
+.draw-result {
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin: 1rem 0 0.25rem;
+}
+
+.draw-result a {
+	color: #ffcc00;
+}
+
+.drawn-list {
+	margin-top: 0.25rem;
+}
+
+.drawn-list li {
+	margin: 0.25rem 0;
+}
+
+.drawn-list a {
+	color: #ffcc00;
+}
+
+.tz-note {
+	color: #AAAAAA;
+	font-size: 0.85rem;
+}
+
+.draw-warning {
+	color: #ffcc00;
+}
+
+.jar {
+	position: relative;
+	width: 160px;
+	height: 220px;
+	margin: 1rem auto 0.25rem;
+	background: rgba(255, 255, 255, 0.06);
+	border: 3px solid #777;
+	border-radius: 14px;
+	overflow: hidden;
+}
+
+.jar-fill {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 0;
+	background: rgba(255, 204, 0, 0.75);
+	transition: height 0.4s ease;
+}
+
+.jar-label {
+	text-align: center;
+	font-weight: bold;
+	color: #ffcc00;
+	margin: 0.25rem 0 1rem;
+}
+
+.stream-list {
+	list-style: none;
+	padding: 0;
+}
+
+.stream-list li {
+	padding: 0.5rem 0;
+	border-bottom: 1px solid #333;
+}
+
+.stream-list li.past {
+	color: #888888;
+}
+
+.stream-list a {
+	color: #ffcc00;
+}

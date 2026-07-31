@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Random Submission Drawer</title>
+	<link rel="stylesheet" href="/css/global.css">
+	
+	<link rel="stylesheet" href="/css/streams.css">
+	
+</head>
+
+<body>
+	<div class="jam-banner">
+		<div class="jam-banner-inner">
+			<a href="/">
+				
+				<img class="logo" src="/assets/skgjam2026.png" alt="Jam logo">
+				
+			</a>
+			<div>
+				<h1>Random Submission Drawer</h1>
+			</div>
+		</div>
+	</div>
+	<nav class="jam-nav">
+		<div class="jam-nav-inner">
+			<a href="/" class="">
+				Home
+			</a>
+			<a href="/skgjam2025/"
+				class="">
+				2025 Edition
+			</a>
+			<div class="jam-nav-item">
+				<a href="/streams/"
+					class="active">
+					Streams
+				</a>
+				<div class="jam-submenu">
+					<a href="/streams/generator/"
+						class="active">
+						Random Generator
+					</a>
+				</div>
+			</div>
+			<a href="/faq/" class="">
+				FAQ
+			</a>
+			<a href="/help/" class="">
+				Help
+			</a>
+		</div>
+	</nav>
+	<div class="page-outer">
+		<div class="page-content">
+			
+<h1>Random Submission Drawer</h1>
+
+<p>
+	Hit the button to draw a random jam submission from the jar. Each drawn submission is
+	removed from the jar, so you won't get the same one twice.
+</p>
+
+<p class="draw-warning">
+	Heads up: your draws are only kept in this page's memory. Refreshing the page will
+	empty the jar and your drawn list.
+</p>
+
+<div class="jar" id="jar">
+	<div class="jar-fill" id="jar-fill"></div>
+</div>
+<p id="jar-label" class="jar-label"></p>
+
+<button id="draw-btn" class="draw-btn" data-games-url="/assets/games.txt" disabled>Draw a submission</button>
+<button id="reset-btn" class="draw-btn">Reset the jar</button>
+
+<p id="draw-result" class="draw-result"></p>
+<p id="remaining"></p>
+<ul id="drawn-list" class="drawn-list"></ul>
+
+<script>
+(function () {
+	var gamesUrl = document.getElementById("draw-btn").getAttribute("data-games-url");
+	var games = [];
+	var total = 0;
+
+	var drawBtn = document.getElementById("draw-btn");
+	var resetBtn = document.getElementById("reset-btn");
+	var drawResult = document.getElementById("draw-result");
+	var remaining = document.getElementById("remaining");
+	var drawnList = document.getElementById("drawn-list");
+	var jarFill = document.getElementById("jar-fill");
+	var jarLabel = document.getElementById("jar-label");
+
+	function loadGames() {
+		return fetch(gamesUrl)
+			.then(function (r) { return r.text(); })
+			.then(function (text) {
+				return text.split("\n")
+					.map(function (line) { return line.trim(); })
+					.filter(Boolean)
+					.map(parseGame)
+					.filter(Boolean);
+			});
+	}
+
+	function parseGame(line) {
+		var m = line.match(/^(.+?)\s+-\s+(https?:\/\/.+)$/);
+		return m ? { name: m[1].trim(), url: m[2].trim() } : null;
+	}
+
+	function updateUI() {
+		remaining.textContent = games.length + " submissions left in the jar";
+		drawBtn.disabled = games.length === 0;
+		if (!total) return;
+		var pct = Math.round((games.length / total) * 100);
+		jarFill.style.height = pct + "%";
+		jarLabel.textContent = games.length === 0
+			? "The jar is empty!"
+			: pct + "% of the jar is still full";
+	}
+
+	function draw() {
+		if (!games.length) return;
+		var i = Math.floor(Math.random() * games.length);
+		var game = games.splice(i, 1)[0];
+
+		var a = document.createElement("a");
+		a.href = game.url;
+		a.target = "_blank";
+		a.rel = "noopener";
+		a.textContent = game.name;
+
+		drawResult.textContent = "You drew: ";
+		drawResult.appendChild(a);
+
+		var li = document.createElement("li");
+		var link = document.createElement("a");
+		link.href = game.url;
+		link.textContent = game.name;
+		li.appendChild(link);
+		drawnList.appendChild(li);
+
+		updateUI();
+	}
+
+	loadGames()
+		.then(function (list) {
+			games = list;
+			total = list.length;
+			updateUI();
+		})
+		.catch(function () {
+			remaining.textContent = "Couldn't load the submissions list.";
+		});
+
+	drawBtn.addEventListener("click", draw);
+
+	resetBtn.addEventListener("click", function () {
+		loadGames()
+			.then(function (list) {
+				games = list;
+				total = list.length;
+				drawResult.textContent = "";
+				drawnList.textContent = "";
+				updateUI();
+			})
+			.catch(function () {
+				remaining.textContent = "Couldn't load the submissions list.";
+			});
+	});
+})();
+</script>
+
+		</div>
+	</div>
+	<div class="jam-footer">
+		<div class="jam-footer-inner">
+			<p>© 2026 Stop Killing Games Community Jam</p>
+		</div>
+	</div>
+</body>
+
+</html>
