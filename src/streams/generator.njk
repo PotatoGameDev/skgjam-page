@@ -13,8 +13,8 @@ pageStyle: streams.css
 </p>
 
 <p class="draw-warning">
-	Heads up: your draws are only kept in this page's memory. Refreshing the page will
-	empty the jar and your drawn list.
+	Heads up: your draws are saved in this browser, so refreshing the page won't empty
+	the jar or your drawn list. Use the reset button to start over.
 </p>
 
 <div class="jar" id="jar">
@@ -32,8 +32,10 @@ pageStyle: streams.css
 <script>
 (function () {
 	var gamesUrl = document.getElementById("draw-btn").getAttribute("data-games-url");
+	var STORAGE_KEY = "skgjam-drawer-drawn";
+	var TOTAL_GAMES = 294;
 	var games = [];
-	var total = 0;
+	var drawnUrls = [];
 
 	var drawBtn = document.getElementById("draw-btn");
 	var resetBtn = document.getElementById("reset-btn");
@@ -63,12 +65,38 @@ pageStyle: streams.css
 	function updateUI() {
 		remaining.textContent = games.length + " submissions left in the jar";
 		drawBtn.disabled = games.length === 0;
-		if (!total) return;
-		var pct = Math.round((games.length / total) * 100);
+		var pct = Math.round((games.length / TOTAL_GAMES) * 100);
+		pct = Math.max(0, Math.min(100, pct));
 		jarFill.style.height = pct + "%";
 		jarLabel.textContent = games.length === 0
 			? "The jar is empty!"
 			: pct + "% of the jar is still full";
+	}
+
+	function loadDrawn() {
+		try {
+			var list = JSON.parse(localStorage.getItem(STORAGE_KEY));
+			return Array.isArray(list) ? list : [];
+		} catch (e) {
+			return [];
+		}
+	}
+
+	function saveDrawn() {
+		try {
+			localStorage.setItem(STORAGE_KEY, JSON.stringify(drawnUrls));
+		} catch (e) {}
+	}
+
+	function renderDrawnItem(game) {
+		var li = document.createElement("li");
+		var link = document.createElement("a");
+		link.href = game.url;
+		link.target = "_blank";
+		link.rel = "noopener";
+		link.textContent = game.name;
+		li.appendChild(link);
+		drawnList.appendChild(li);
 	}
 
 	function draw() {
@@ -85,20 +113,26 @@ pageStyle: streams.css
 		drawResult.textContent = "You drew: ";
 		drawResult.appendChild(a);
 
-		var li = document.createElement("li");
-		var link = document.createElement("a");
-		link.href = game.url;
-		link.textContent = game.name;
-		li.appendChild(link);
-		drawnList.appendChild(li);
+		drawnUrls.push(game.url);
+		saveDrawn();
+		renderDrawnItem(game);
 
 		updateUI();
 	}
 
 	loadGames()
 		.then(function (list) {
-			games = list;
-			total = list.length;
+			drawnUrls = loadDrawn();
+			var drawnSet = {};
+			drawnUrls.forEach(function (url) { drawnSet[url] = true; });
+			games = list.filter(function (g) { return !drawnSet[g.url]; });
+
+			var byUrl = {};
+			list.forEach(function (g) { byUrl[g.url] = g; });
+			drawnUrls.forEach(function (url) {
+				if (byUrl[url]) renderDrawnItem(byUrl[url]);
+			});
+
 			updateUI();
 		})
 		.catch(function () {
@@ -108,10 +142,11 @@ pageStyle: streams.css
 	drawBtn.addEventListener("click", draw);
 
 	resetBtn.addEventListener("click", function () {
+		drawnUrls = [];
+		saveDrawn();
 		loadGames()
 			.then(function (list) {
 				games = list;
-				total = list.length;
 				drawResult.textContent = "";
 				drawnList.textContent = "";
 				updateUI();

@@ -3,27 +3,39 @@
 	{
 		"streamer": "sanket143",
 		"start": "2026-08-01T14:00:00Z",
-		"title": "sanket143 Stream - 1 hour",
+		"title": "sanket143 Stream",
+		"lengthHours": 1,
 		"youtube": "https://www.youtube.com/live/1X3eYutknbg"
 	},
 	{
 		"streamer": "SmorMcfluff",
 		"start": "2026-08-01T15:00:00Z",
-		"title": "SmorMcfluff Block - 2 hours",
+		"title": "SmorMcfluff Block",
+		"lengthHours": 2,
 		"twitch": "https://www.twitch.tv/smormcfluff",
 		"youtube": "https://www.youtube.com/watch?v=bICpSse4e6Q"
 	},
 	{
 		"streamer": "PotatoGameDev",
 		"start": "2026-08-01T17:00:00Z",
-		"title": "Potato Block - 2 hour",
-		"youtube": "https://www.youtube.com/live/P638t3bvbTI",
+		"title": "Potato Block",
+		"lengthHours": 2,
+		"youtube": "https://www.youtube.com/watch?v=_-U8eAZARf4",
 		"twitch": "https://www.twitch.tv/potatogamedev"
 	},
 	{
 		"streamer": "RFFM 鼠五花肉",
 		"start": "2026-08-02T00:00:00Z",
-		"title": "RFFM Stream - 3 hours",
+		"title": "RFFM Stream",
+		"lengthHours": 3,
 		"youtube": "https://youtube.com/live/1GKacglxloY"
+	},
+	{
+		"streamer": "SmorMcfluff",
+		"start": "2026-08-02T17:00:00Z",
+		"title": "SmoreMcfluffs stream",
+		"lengthHours": 3,
+		"youtube": "https://www.youtube.com/watch?v=D_bZrHZQSNw",
+		"twitch": "https://www.twitch.tv/smormcfluff"
 	}
 ]

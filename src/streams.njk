@@ -33,13 +33,17 @@ pageStyle: streams.css
 			listEl.textContent = "No stream list file available yet.";
 		});
 
+	function endMs(s) {
+		return new Date(s.start).getTime() + (s.lengthHours || 0) * 3600000;
+	}
+
 	function render(streams) {
 		var now = Date.now();
 		var upcoming = streams
-			.filter(function (s) { return new Date(s.start).getTime() >= now; })
+			.filter(function (s) { return endMs(s) >= now; })
 			.sort(function (a, b) { return new Date(a.start) - new Date(b.start); });
 		var past = streams
-			.filter(function (s) { return new Date(s.start).getTime() < now; })
+			.filter(function (s) { return endMs(s) < now; })
 			.sort(function (a, b) { return new Date(b.start) - new Date(a.start); });
 
 		if (!streams.length) {
@@ -47,25 +51,43 @@ pageStyle: streams.css
 			return;
 		}
 
-		upcoming.forEach(function (s) { listEl.appendChild(renderItem(s, false)); });
-		past.forEach(function (s) { listEl.appendChild(renderItem(s, true)); });
+		if (upcoming.length) {
+			listEl.appendChild(heading("Upcoming"));
+			upcoming.forEach(function (s) { listEl.appendChild(renderItem(s)); });
+		}
+		if (past.length) {
+			listEl.appendChild(heading("Past"));
+			past.forEach(function (s) { listEl.appendChild(renderItem(s)); });
+		}
 	}
 
-	function renderItem(s, isPast) {
-		var li = document.createElement("li");
-		if (isPast) li.className = "past";
+	function heading(text) {
+		var h = document.createElement("h2");
+		h.textContent = text;
+		return h;
+	}
 
-		var time = new Intl.DateTimeFormat(undefined, {
-			dateStyle: "medium",
-			timeStyle: "short"
+	function renderItem(s) {
+		var li = document.createElement("li");
+		var startedMs = new Date(s.start).getTime();
+		var ended = endMs(s) < Date.now();
+		if (ended) li.className = "past";
+
+		var date = new Intl.DateTimeFormat(undefined, {
+			dateStyle: "medium"
 		}).format(new Date(s.start));
 
-		li.appendChild(document.createTextNode(s.streamer + " - " + time));
+		li.appendChild(document.createTextNode(s.streamer + " - " + date));
 		if (s.title) {
 			li.appendChild(document.createTextNode(" - " + s.title));
 		}
-		if (isPast) {
+		if (s.lengthHours) {
+			li.appendChild(document.createTextNode(" (" + durationLabel(s.lengthHours) + ")"));
+		}
+		if (ended) {
 			li.appendChild(document.createTextNode(" (ended)"));
+		} else if (startedMs <= Date.now()) {
+			li.appendChild(document.createTextNode(" (live)"));
 		}
 
 		var links = [];
@@ -80,6 +102,10 @@ pageStyle: streams.css
 		}
 
 		return li;
+	}
+
+	function durationLabel(hours) {
+		return hours === 1 ? "1 hour" : hours + " hours";
 	}
 
 	function makeLink(href, label) {
