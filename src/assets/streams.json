@@ -1,16 +1,29 @@
 [
+
+	{
+		"streamer": "sanket143 - 1 hour",
+		"start": "2026-08-01T14:00:00Z",
+		"title": "sanket143 Stream!",
+		"youtube": "https://www.youtube.com/live/1X3eYutknbg"
+	},
 	{
 		"streamer": "SmorMcfluff",
 		"start": "2026-08-01T15:00:00Z",
-		"title": "SmorMcfluff Block",
+		"title": "SmorMcfluff Block - 2 hours",
 		"twitch": "https://www.twitch.tv/smormcfluff",
 		"youtube": "https://www.youtube.com/watch?v=bICpSse4e6Q"
 	},
 	{
 		"streamer": "PotatoGameDev",
 		"start": "2026-08-01T17:00:00Z",
-		"title": "Potato Block",
+		"title": "Potato Block - 2 hour",
 		"youtube": "https://www.youtube.com/live/P638t3bvbTI",
 		"twitch": "https://www.twitch.tv/potatogamedev"
+	},
+	{
+		"streamer": "RFFM 鼠五花肉",
+		"start": "2026-08-02T00:00:00Z",
+		"title": "RFFM Stream - 3 hours",
+		"youtube": "https://www.youtube.com/@JustinY.2005"
 	}
 ]
