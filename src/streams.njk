@@ -74,7 +74,8 @@ pageStyle: streams.css
 		if (ended) li.className = "past";
 
 		var date = new Intl.DateTimeFormat(undefined, {
-			dateStyle: "medium"
+			dateStyle: "medium",
+			timeStyle: "short"
 		}).format(new Date(s.start));
 
 		li.appendChild(document.createTextNode(s.streamer + " - " + date));
