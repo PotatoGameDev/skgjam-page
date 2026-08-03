@@ -84,12 +84,22 @@
 }
 
 .stream-list li {
-	padding: 0.5rem 0;
+	padding: 0.5rem 0.75rem;
 	border-bottom: 1px solid #333;
+}
+
+.stream-list li:nth-of-type(even) {
+	background: rgba(255, 255, 255, 0.05);
 }
 
 .stream-list li.past {
 	color: #888888;
+}
+
+.stream-list .stream-author {
+	color: #ffcc00;
+	font-weight: bold;
+	font-size: 1.05rem;
 }
 
 .stream-list a {
