@@ -108,6 +108,25 @@
 		"start": "2026-08-03T13:00:00Z",
 		"title": "RFFM Stream",
 		"lengthHours": 3,
-		"youtube": "https://www.youtube.com/@JustinY.2005"
+		"youtube": "https://www.youtube.com/watch?v=7XyQhISNX9U",
+		"games": [
+			{ "title": "Stolen Moves", "url": "https://itch.io/jam/skg-jam-2026/rate/4811456" },
+			{ "title": "Speedy_CHesser in only 7 Hours", "url": "https://itch.io/jam/skg-jam-2026/rate/4791427" },
+			{ "title": "Bassed", "url": "https://itch.io/jam/skg-jam-2026/rate/4799304" },
+			{ "title": "Smash the Office", "url": "https://itch.io/jam/skg-jam-2026/rate/4815007" },
+			{ "title": "Ross Saves Video Games", "url": "https://itch.io/jam/skg-jam-2026/rate/4811763" },
+			{ "title": "Rank Rush", "url": "https://itch.io/jam/skg-jam-2026/rate/4797154" },
+			{ "title": "Netrunners VS Corpos", "url": "https://itch.io/jam/skg-jam-2026/rate/4809250" },
+			{ "title": "Never Played Billiards", "url": "https://itch.io/jam/skg-jam-2026/rate/4797955" },
+			{ "title": "Goblin Chaser", "url": "https://itch.io/jam/skg-jam-2026/rate/4789460" }
+		]
+	},
+	{
+		"streamer": "Can't Stop Cat",
+		"start": "2026-08-05T17:00:00Z",
+		"title": "Can't Stop Cat Stream",
+		"duration": "TBD",
+		"youtube": "https://www.youtube.com/@Cant-Stop-Cat",
+		"twitch": "https://www.twitch.tv/cant_stop_cat"
 	}
 ]

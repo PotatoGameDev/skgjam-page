@@ -16,6 +16,10 @@ Will the players be able to enjoy it if itch.io goes down?
 What if you decide to unpublish it - will the player be able to keep playing?
 After all, we are making the games for the players!
 
+The Stop Killing Games Community Jam 2026 is over, watch the showreel:
+
+<iframe width="1063" height="598" src="https://www.youtube-nocookie.com/embed/LRyn6b1i7hs" title="Stop Killing Games Community Jam 2026 Showreel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## 2026 Edition
 
 Current edition of the jam is SKG Community Jam 2026.

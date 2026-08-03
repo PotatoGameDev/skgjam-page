@@ -85,6 +85,8 @@ pageStyle: streams.css
 		}
 		if (s.lengthHours) {
 			li.appendChild(document.createTextNode(" (" + durationLabel(s.lengthHours) + ")"));
+		} else if (s.duration) {
+			li.appendChild(document.createTextNode(" (" + s.duration + ")"));
 		}
 		if (ended) {
 			li.appendChild(document.createTextNode(" (ended)"));
