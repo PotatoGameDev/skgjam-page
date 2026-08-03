@@ -37,5 +37,12 @@
 		"lengthHours": 3,
 		"youtube": "https://www.youtube.com/watch?v=D_bZrHZQSNw",
 		"twitch": "https://www.twitch.tv/smormcfluff"
+	},
+	{
+		"streamer": "RFFM 鼠五花肉",
+		"start": "2026-08-03T13:00:00Z",
+		"title": "RFFM Stream",
+		"lengthHours": 3,
+		"youtube": "https://www.youtube.com/@JustinY.2005"
 	}
 ]
