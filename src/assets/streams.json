@@ -61,7 +61,22 @@
 		"start": "2026-08-02T00:00:00Z",
 		"title": "RFFM Stream",
 		"lengthHours": 3,
-		"youtube": "https://www.youtube.com/watch?v=ftrp1frjtPk"
+		"youtube": "https://www.youtube.com/watch?v=ftrp1frjtPk",
+		"games": [
+			{ "title": "Pack A Bag", "url": "https://itch.io/jam/skg-jam-2026/rate/4803634" },
+			{ "title": "Gone Fishing", "url": "https://itch.io/jam/skg-jam-2026/rate/4808086" },
+			{ "title": "COW-COW REMIX", "url": "https://itch.io/jam/skg-jam-2026/rate/4787967" },
+			{ "title": "Climb 'Til You Can't", "url": "https://itch.io/jam/skg-jam-2026/rate/4806885" },
+			{ "title": "Tres En Raya 2", "url": "https://itch.io/jam/skg-jam-2026/rate/4562065" },
+			{ "title": "Untitled Unpolished Platformer", "url": "https://itch.io/jam/skg-jam-2026/rate/4805500" },
+			{ "title": "Mars Rover Builder", "url": "https://itch.io/jam/skg-jam-2026/rate/4811451" },
+			{ "title": "Stupid Shape Game", "url": "https://itch.io/jam/skg-jam-2026/rate/4814375" },
+			{ "title": "Juggle Birds", "url": "https://itch.io/jam/skg-jam-2026/rate/4800874" },
+			{ "title": "Save the Gacha!", "url": "https://itch.io/jam/skg-jam-2026/rate/4812418" },
+			{ "title": "The Shell", "url": "https://itch.io/jam/skg-jam-2026/rate/4815616" },
+			{ "title": "HordeRush", "url": "https://itch.io/jam/skg-jam-2026/rate/4814591" },
+			{ "title": "Ore Rush", "url": "https://itch.io/jam/skg-jam-2026/rate/4815314" }
+		]
 	},
 	{
 		"streamer": "SmorMcfluff",
@@ -69,7 +84,24 @@
 		"title": "SmoreMcfluffs stream",
 		"lengthHours": 3,
 		"youtube": "https://www.youtube.com/watch?v=D_bZrHZQSNw",
-		"twitch": "https://www.twitch.tv/smormcfluff"
+		"twitch": "https://www.twitch.tv/smormcfluff",
+		"games": [
+			{ "title": "No Flag Pole?", "url": "https://itch.io/jam/skg-jam-2026/rate/4792262" },
+			{ "title": "Dragon Frenzy", "url": "https://itch.io/jam/skg-jam-2026/rate/4808823" },
+			{ "title": "DogTrainer3D", "url": "https://itch.io/jam/skg-jam-2026/rate/4815267" },
+			{ "title": "Climb 'Til You Can't", "url": "https://itch.io/jam/skg-jam-2026/rate/4806885" },
+			{ "title": "The Score Must Survive", "url": "https://itch.io/jam/skg-jam-2026/rate/4799769" },
+			{ "title": "Hell Yeah", "url": "https://itch.io/jam/skg-jam-2026/rate/4802977" },
+			{ "title": "One more Credit", "url": "https://itch.io/jam/skg-jam-2026/rate/4804033" },
+			{ "title": "Pencil Arena", "url": "https://itch.io/jam/skg-jam-2026/rate/4806789" },
+			{ "title": "Escape Road", "url": "https://itch.io/jam/skg-jam-2026/rate/4815121" },
+			{ "title": "Space Shooter Extreme", "url": "https://itch.io/jam/skg-jam-2026/rate/4804161" },
+			{ "title": "Preservatives", "url": "https://itch.io/jam/skg-jam-2026/rate/4814050" },
+			{ "title": "Stack Server", "url": "https://itch.io/jam/skg-jam-2026/rate/4810613" },
+			{ "title": "World First Denied", "url": "https://itch.io/jam/skg-jam-2026/rate/4814931" },
+			{ "title": "Fall of Apsis", "url": "https://itch.io/jam/skg-jam-2026/rate/4805998" },
+			{ "title": "First Place, Obviously", "url": "https://itch.io/jam/skg-jam-2026/rate/4789376" }
+		]
 	},
 	{
 		"streamer": "RFFM 鼠五花肉",

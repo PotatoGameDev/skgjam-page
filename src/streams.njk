@@ -78,7 +78,8 @@ pageStyle: streams.css
 			timeStyle: "short"
 		}).format(new Date(s.start));
 
-		li.appendChild(document.createTextNode(s.streamer + " - " + date));
+		li.appendChild(makeAuthor(s.streamer));
+		li.appendChild(document.createTextNode(" - " + date));
 		if (s.title) {
 			li.appendChild(document.createTextNode(" - " + s.title));
 		}
@@ -116,6 +117,13 @@ pageStyle: streams.css
 
 	function durationLabel(hours) {
 		return hours === 1 ? "1 hour" : hours + " hours";
+	}
+
+	function makeAuthor(name) {
+		var span = document.createElement("span");
+		span.className = "stream-author";
+		span.textContent = name;
+		return span;
 	}
 
 	function makeLink(href, label) {
