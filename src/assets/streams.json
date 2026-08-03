@@ -5,7 +5,17 @@
 		"start": "2026-08-01T14:00:00Z",
 		"title": "sanket143 Stream",
 		"lengthHours": 1,
-		"youtube": "https://www.youtube.com/live/1X3eYutknbg"
+		"youtube": "https://www.youtube.com/live/1X3eYutknbg",
+		"games": [
+			{ "title": "Net'n Pistol", "url": "https://itch.io/jam/skg-jam-2026/rate/4814610" },
+			{ "title": "Chronicles of Noclue", "url": "https://itch.io/jam/skg-jam-2026/rate/4815193" },
+			{ "title": "Protect the chocolate", "url": "https://itch.io/jam/skg-jam-2026/rate/4802792" },
+			{ "title": "CrownChaser", "url": "https://itch.io/jam/skg-jam-2026/rate/4800920" },
+			{ "title": "Minigamez", "url": "https://itch.io/jam/skg-jam-2026/rate/4791551" },
+			{ "title": "Bounce, Bounce, Bounce!", "url": "https://itch.io/jam/skg-jam-2026/rate/4812058" },
+			{ "title": "The Wrong One", "url": "https://itch.io/jam/skg-jam-2026/rate/4804760" },
+			{ "title": "DOPEAMINOYD", "url": "https://itch.io/jam/skg-jam-2026/rate/4814297" }
+		]
 	},
 	{
 		"streamer": "SmorMcfluff",
@@ -13,7 +23,21 @@
 		"title": "SmorMcfluff Block",
 		"lengthHours": 2,
 		"twitch": "https://www.twitch.tv/smormcfluff",
-		"youtube": "https://www.youtube.com/watch?v=bICpSse4e6Q"
+		"youtube": "https://www.youtube.com/watch?v=bICpSse4e6Q",
+		"games": [
+			{ "title": "One button rocket", "url": "https://itch.io/jam/skg-jam-2026/rate/4811778" },
+			{ "title": "The Legend Of Jordan", "url": "https://itch.io/jam/skg-jam-2026/rate/4813218" },
+			{ "title": "Chop! Chop! Chop!", "url": "https://itch.io/jam/skg-jam-2026/rate/4812679" },
+			{ "title": "DOPEAMINOYD", "url": "https://itch.io/jam/skg-jam-2026/rate/4814297" },
+			{ "title": "SPLAT!", "url": "https://itch.io/jam/skg-jam-2026/rate/4803912" },
+			{ "title": "Neon High", "url": "https://itch.io/jam/skg-jam-2026/rate/4815109" },
+			{ "title": "Chase!", "url": "https://itch.io/jam/skg-jam-2026/rate/4813332" },
+			{ "title": "Bullet Ant", "url": "https://itch.io/jam/skg-jam-2026/rate/4811827" },
+			{ "title": "Tres En Raya 2", "url": "https://itch.io/jam/skg-jam-2026/rate/4562065" },
+			{ "title": "D.C.R. (Fighting Rogue AIs With The Power Of Discs)", "url": "https://itch.io/jam/skg-jam-2026/rate/4815158" },
+			{ "title": "The Highest Score", "url": "https://itch.io/jam/skg-jam-2026/rate/4812526" },
+			{ "title": "Deep Waters", "url": "https://itch.io/jam/skg-jam-2026/rate/4812950" }
+		]
 	},
 	{
 		"streamer": "PotatoGameDev",
@@ -21,7 +45,16 @@
 		"title": "Potato Block",
 		"lengthHours": 2,
 		"youtube": "https://www.youtube.com/watch?v=_-U8eAZARf4",
-		"twitch": "https://www.twitch.tv/potatogamedev"
+		"twitch": "https://www.twitch.tv/potatogamedev",
+		"games": [
+			{ "title": "GOTTA RUSH A GAME!!", "url": "https://itch.io/jam/skg-jam-2026/rate/4805839" },
+			{ "title": "GO GET IT! (GAME JAM)", "url": "https://itch.io/jam/skg-jam-2026/rate/4812888" },
+			{ "title": "Thumble Dwarf", "url": "https://itch.io/jam/skg-jam-2026/rate/4795585" },
+			{ "title": "Adrian", "url": "https://itch.io/jam/skg-jam-2026/rate/4801597" },
+			{ "title": "The Stolen Unborn", "url": "https://itch.io/jam/skg-jam-2026/rate/4803858" },
+			{ "title": "Lights Out", "url": "https://itch.io/jam/skg-jam-2026/rate/4803677" },
+			{ "title": "YOU ARE", "url": "https://itch.io/jam/skg-jam-2026/rate/4807022" }
+		]
 	},
 	{
 		"streamer": "RFFM 鼠五花肉",
