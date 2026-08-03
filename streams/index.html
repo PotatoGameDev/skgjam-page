@@ -152,6 +152,15 @@
 			});
 		}
 
+		if (ended && s.games && s.games.length) {
+			li.appendChild(document.createElement("br"));
+			li.appendChild(document.createTextNode("Games: "));
+			s.games.forEach(function (g, i) {
+				if (i > 0) li.appendChild(document.createTextNode(", "));
+				li.appendChild(makeLink(g.url, g.title));
+			});
+		}
+
 		return li;
 	}
 
