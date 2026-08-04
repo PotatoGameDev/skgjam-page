@@ -18,13 +18,12 @@ After all, we are making the games for the players!
 
 The Stop Killing Games Community Jam 2026 is over, watch the showreel:
 
-<iframe width="1063" height="598" src="https://www.youtube-nocookie.com/embed/LRyn6b1i7hs" title="Stop Killing Games Community Jam 2026 Showreel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="100%" height="562" src="https://www.youtube-nocookie.com/embed/LRyn6b1i7hs" title="Stop Killing Games Community Jam 2026 Showreel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## 2026 Edition
 
 Current edition of the jam is SKG Community Jam 2026.
 It will be held from July 17 to July 31, 2026.
-There is plenty of time to get ready, so go ahead and sign up!
 
 
 ## This time there are some prizes involved!

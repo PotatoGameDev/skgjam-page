@@ -128,5 +128,12 @@
 		"duration": "TBD",
 		"youtube": "https://www.youtube.com/@Cant-Stop-Cat",
 		"twitch": "https://www.twitch.tv/cant_stop_cat"
+	},
+	{
+		"streamer": "PotatoGameDev",
+		"start": "2026-08-06T14:00:00Z",
+		"title": "PotatoGameDev Stream",
+		"lengthHours": 2,
+		"youtube": "https://www.youtube.com/live/P638t3bvbTI"
 	}
 ]
