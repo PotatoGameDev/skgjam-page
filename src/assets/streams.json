@@ -125,9 +125,17 @@
 		"streamer": "Can't Stop Cat",
 		"start": "2026-08-05T17:00:00Z",
 		"title": "Can't Stop Cat Stream",
-		"duration": "TBD",
+		"lengthHours": 2,
 		"youtube": "https://www.youtube.com/@Cant-Stop-Cat",
-		"twitch": "https://www.twitch.tv/cant_stop_cat"
+		"twitch": "https://www.twitch.tv/cant_stop_cat",
+		"games": [
+			{ "title": "POLARIS", "url": "https://itch.io/jam/skg-jam-2026/rate/4797212" },
+			{ "title": "NyanJump", "url": "https://itch.io/jam/skg-jam-2026/rate/4815517" },
+			{ "title": "CrazyOutback", "url": "https://itch.io/jam/skg-jam-2026/rate/4815574" },
+			{ "title": "Banan's Peelout", "url": "https://itch.io/jam/skg-jam-2026/rate/4804082" },
+			{ "title": "Size Matters Duck Edition", "url": "https://itch.io/jam/skg-jam-2026/rate/4811401" },
+			{ "title": "Daegon's Last Call", "url": "https://itch.io/jam/skg-jam-2026/rate/4811956" }
+		]
 	},
 	{
 		"streamer": "PotatoGameDev",
@@ -135,5 +143,12 @@
 		"title": "PotatoGameDev Stream",
 		"lengthHours": 2,
 		"youtube": "https://www.youtube.com/live/P638t3bvbTI"
+	},
+	{
+		"streamer": "SmorMcfluff",
+		"start": "2026-08-06T16:00:00Z",
+		"title": "SmorMcfluff Stream",
+		"lengthHours": 3,
+		"twitch": "https://www.twitch.tv/smormcfluff"
 	}
 ]
